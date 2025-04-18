@@ -1,20 +1,19 @@
-apiVersion: apps/v1
+piVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-node-app
+  name: my-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-node-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: my-node-app
+        app: my-app
     spec:
       containers:
-      - name: my-node-app
-        image: my-node-app
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 80
+        - name: my-container
+          image: nginx
+          ports:
+            - containerPort: 80
