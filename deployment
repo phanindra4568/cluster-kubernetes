@@ -17,4 +17,4 @@ spec:
         image: my-node-app
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 80
